@@ -203,13 +203,13 @@ def main():
     # chatbot.load_pdf_text(sample_pdf_text)
     
     # Example 2: Load from your PDF file
-    chatbot.load_pdf_from_file("Sample_PDF.pdf")
+    chatbot.load_pdf_from_file("Sample_PDF_2.pdf")
     
     print("=== PDF Chatbot Demo ===\n")
     
     # Demo queries
     queries = [
-        "Identify the entire table of contents from the given pdf."
+        "Identify the entire table of contents from the given pdf and produce a mapping of section start and PDF page numbers."
     ]
     
     for query in queries:
