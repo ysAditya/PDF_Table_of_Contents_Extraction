@@ -146,35 +146,35 @@ Answer:
         self.chat_history = []
         print("Chat history cleared.")
     
-    def get_pdf_summary(self) -> str:
-        """
-        Get a summary of the loaded PDF content
+#     def get_pdf_summary(self) -> str:
+#         """
+#         Get a summary of the loaded PDF content
         
-        Returns:
-            Summary of the PDF content
-        """
-        if not self.pdf_content:
-            return "No PDF content loaded."
+#         Returns:
+#             Summary of the PDF content
+#         """
+#         if not self.pdf_content:
+#             return "No PDF content loaded."
         
-        summary_prompt = f"""
-Please provide a brief summary of the following document content:
+#         summary_prompt = f"""
+# Please provide a brief summary of the following document content:
 
-{self.pdf_content[:5000]}  # First 5000 characters to avoid token limits
+# {self.pdf_content[:5000]}  # First 5000 characters to avoid token limits
 
-Provide:
-1. Main topic/subject
-2. Key sections or chapters
-3. Important concepts mentioned
-4. Document type/purpose
+# Provide:
+# 1. Main topic/subject
+# 2. Key sections or chapters
+# 3. Important concepts mentioned
+# 4. Document type/purpose
 
-Summary:
-"""
+# Summary:
+# """
         
-        try:
-            response = self.model.generate_content(summary_prompt)
-            return response.text
-        except Exception as e:
-            return f"Error generating summary: {e}"
+#         try:
+#             response = self.model.generate_content(summary_prompt)
+#             return response.text
+#         except Exception as e:
+#             return f"Error generating summary: {e}"
 
 
 # Example usage and demo
@@ -219,9 +219,9 @@ def main():
         print("-" * 50 + "\n")
     
     # Get document summary
-    print("=== Document Summary ===")
-    summary = chatbot.get_pdf_summary()
-    print(summary)
+    # print("=== Document Summary ===")
+    # summary = chatbot.get_pdf_summary()
+    # print(summary)
 
 
 # Interactive chatbot function
@@ -283,7 +283,7 @@ def interactive_chat():
 if __name__ == "__main__":
     # Run demo
     print("Choose mode:")
-    print("1. Demo with sample data")
+    print("1. Show me the TOC of the sample PDF")
     print("2. Interactive chat")
     
     mode = input("Enter choice (1 or 2): ").strip()

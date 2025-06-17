@@ -86,3 +86,8 @@ pdf_project_v3/
 ├── .env               # Your API key (not committed to version control)
 ├── Sample_PDF_2.pdf   # Your PDF file
 └── README.md          # Project documentation
+
+
+---
+
+Let me know if you’d like a badge version (e.g., stars, Python version), or a version prepared for GitHub with collapsible sections.
